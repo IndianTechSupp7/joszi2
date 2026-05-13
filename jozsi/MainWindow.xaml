@@ -1,0 +1,62 @@
+﻿<Window x:Class="jozsi.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:jozsi"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="500">
+    <Grid Margin="10">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="32" >Felhasználó kezelő</TextBlock>
+
+        <!-- BAL OLDAL: GOMBOK -->
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Button Grid.Row="0"
+                    Content="Új felhasználó"
+                    Margin="5"
+                    Height="40"
+                    Click="AddUser_Click"/>
+
+            <Button Grid.Row="1"
+                    Content="Statisztika"
+                    Margin="5"
+                    Height="40"
+                    Click="Stats_Click"/>
+
+            <Button Grid.Row="2"
+                    Content="Kilépés"
+                    Margin="5"
+                    Height="40"
+                    Click="Exit_Click"/>
+        </Grid>
+
+        <!-- JOBB OLDAL: KÉP -->
+        <Border Grid.Column="0"
+                Grid.Row="1"
+                Margin="10"
+                Background="LightGray"
+                CornerRadius="10">
+
+            <Image Source="/Images/main.jpg" Stretch="Fill"/>
+        </Border>
+
+    </Grid>
+</Window>

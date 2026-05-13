@@ -1,0 +1,55 @@
+﻿<Window x:Class="jozsi.AddUserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:jozsi"
+        mc:Ignorable="d"
+        Title="AddUserWindow" Height="219" Width="450">
+
+    <Grid Margin="10">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Név -->
+        <TextBlock Text="Név:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
+        <TextBox x:Name="NameBox" Grid.Row="0" Grid.Column="1" Margin="5"/>
+
+        <!-- Cím -->
+        <TextBlock Text="Lakcím:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"/>
+        <TextBox x:Name="AddressBox" Grid.Row="1" Grid.Column="1" Margin="5"/>
+
+        <!-- Életkor -->
+        <TextBlock Text="Életkor:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"/>
+        <TextBox x:Name="AgeBox" Grid.Row="2" Grid.Column="1" Margin="5"/>
+
+        <!-- Gombok -->
+        <Grid Grid.Row="3" Grid.ColumnSpan="2" Margin="0,20,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Button Content="Mentés"
+                    Grid.Column="0"
+                    Margin="5"
+                    Click="Save_Click"/>
+
+            <Button Content="Mégse"
+                    Grid.Column="1"
+                    Margin="5"
+                    Click="Cancel_Click"/>
+        </Grid>
+
+    </Grid>
+</Window>
